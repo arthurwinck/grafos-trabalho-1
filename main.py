@@ -1,4 +1,4 @@
 from grafo import Grafo
 
 grafo = Grafo()
-grafo.ler('teste.txt')
+grafo.ler('fln_pequena.net')

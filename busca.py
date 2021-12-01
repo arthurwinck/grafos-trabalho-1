@@ -1,7 +1,7 @@
 
 from grafo import Grafo
 
-def busca_largura(grafo, vertice):
+def busca(grafo, vertice):
     if vertice < 0 or vertice >= grafo.qtdVertices():
         print("Impossivel")
         return 0
@@ -13,9 +13,9 @@ def busca_largura(grafo, vertice):
         distancia = 0
         
         while len(fila) != 0:
-                nivel_atual = fila.copy()
+                level = fila.copy()
                 fila = []
-                for vert in nivel_atual:
+                for vert in level:
                     v = vert
                     visitados[v] = True
                     vizinhos_false = []
@@ -29,13 +29,13 @@ def busca_largura(grafo, vertice):
                         visitados[vizinhos_false[i]] = True
                     fila.extend(vizinhos_false)
                 
-                nivel_atual = [str(string) for string in nivel_atual]
+                level = [str(string) for string in level]
                 print("%d:" % (distancia), end = ' ')
-                print(",".join(nivel_atual))
+                print(",".join(level))
                 
                 distancia += 1
 
 grafo1 = Grafo()
 grafo1.ler('teste.txt')
-
-busca_largura(grafo1, 2)
+print("\nBusca em largura:")
+busca(grafo1, 2)
