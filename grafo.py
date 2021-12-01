@@ -77,20 +77,15 @@ class Grafo:
 
         flag_vertices = False
         flag_arestas = False
-        #necessário manter o num de arestas/vertices?
-        num_vertices = 0
-        num_arestas = 0
 
         for linha in linhas:
                         
             if '*vertices' in linha:
                 lista_linha = linha.split(' ')
-                num_vertices = lista_linha[1]
                 flag_vertices = True
 
             elif '*edges' in linha:
                 lista_linha = linha.split(' ')
-                num_arestas = lista_linha[1]
                 flag_vertices = False
                 flag_arestas = True
 
