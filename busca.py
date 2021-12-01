@@ -35,5 +35,7 @@ def busca_largura(grafo, vertice):
                 
                 distancia += 1
 
-grafo1 = Grafo.ler() #falta implementar
-grafo1(grafo1,1)
+grafo1 = Grafo()
+grafo1.ler('teste.txt')
+
+busca_largura(grafo1, 2)
