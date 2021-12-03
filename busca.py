@@ -36,6 +36,7 @@ def busca(grafo, vertice):
                 distancia += 1
 
 grafo1 = Grafo()
-grafo1.ler('teste.txt')
+grafo1.ler('fln_pequena.net')
+
 print("\nBusca em largura:")
 busca(grafo1, 2)

@@ -31,6 +31,13 @@ class Grafo:
         #Rotulo ligado a um vértice
         return vertice.rotulo
 
+    def acharVertice(self, index):
+        for vertice in self.vertices:
+            if int(vertice.index) == int(index):
+                return vertice
+            
+        return None
+
     def vizinhos(self, vertice):
         #Todos os vértices ligados diretamente a esse vértice
         lista_vizinhos = []
@@ -96,10 +103,8 @@ class Grafo:
 
             elif flag_arestas:
                 lista_linha = linha.split(' ')
-                aresta = Aresta([lista_linha[0], lista_linha[1]], lista_linha[2])
+                aresta = Aresta([int(lista_linha[0]), int(lista_linha[1])], lista_linha[2])
                 self.adicionarAresta(aresta)
-
-        self.print()
 
     def print(self):
         print("\nPrint do Grafo ------------")

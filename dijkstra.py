@@ -72,6 +72,7 @@ class Dijkstra():
                     # If Dv > Du + w((u,v))
                     if self.nos[self.vertice.index].distancia > self.nos[verticeMin.index].distancia + self.grafo.getAresta(self.vertice, verticeMin):
                         # Dv = Du + w((u,v))
+                        
                         self.nos[self.vertice.index].distancia = self.nos[verticeMin.index].distancia + self.grafo.getAresta(self.vertice, verticeMin)
                         self.nos[self.vertice.index].antecessor = self.nos[self.verticeMin.index]
 
