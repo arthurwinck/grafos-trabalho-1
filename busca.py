@@ -1,7 +1,7 @@
 
 from grafo import Grafo
 
-def busca(grafo, vertice):
+def Busca(grafo, vertice):
     if vertice < 0 or vertice >= grafo.qtdVertices():
         print("Impossivel")
         return 0
@@ -12,6 +12,7 @@ def busca(grafo, vertice):
         fila.append(vertice)
         distancia = 0
         
+        print("Algoritmo de Busca em Largura ------------")
         while len(fila) != 0:
                 level = fila.copy()
                 fila = []
@@ -35,8 +36,3 @@ def busca(grafo, vertice):
                 
                 distancia += 1
 
-grafo1 = Grafo()
-grafo1.ler('fln_pequena.net')
-
-print("\nBusca em largura:")
-busca(grafo1, 2)

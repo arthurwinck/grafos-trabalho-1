@@ -64,8 +64,8 @@ class Grafo:
                 return aresta
             if verticeA == aresta.vertices[1] and verticeB == aresta.vertices[0]:
                 return aresta
-            else:
-                return None
+                    
+        return None
 
     def peso(self, verticeA, verticeB):
         #Retorna o peso de uma aresta entre vértices A e B, retorna infinto se não exsitir essa aresta
@@ -117,7 +117,7 @@ class Grafo:
 
 class Vertice:
     def __init__(self, index, rotulo):
-        self.index = index
+        self.index = int(index)
         self.rotulo = rotulo
 
 class Aresta:
