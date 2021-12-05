@@ -45,13 +45,24 @@ class Dijkstra():
 
         return verticeMin
 
+    def getAntecessores(self, no):
+        lista_antecessor = []
+
+        while True:
+            lista_antecessor.append(no.index)
+            
+            if no.antecessor == None:
+                break
+            else:
+                no = no.antecessor
+            
+        return lista_antecessor
+
     def print(self):
         print("Algoritmo de Dijkstra --------------")
         for no in self.nos:
-            if no.antecessor != None:
-                print(f"vértice {no.index} | distância {no.distancia} | antecessor {no.antecessor.index}")
-            else:
-                print(f"vértice {no.index} | distância {no.distancia} | antecessor None")
+            lista_antecessores = self.getAntecessores(no)
+            print(f"{no.index}: {lista_antecessores[::-1]}; d={no.distancia}")
 
 
     def executar(self):
