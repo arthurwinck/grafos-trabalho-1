@@ -18,7 +18,6 @@ def matriz_de_adjacencia(grafo):
 
 def floyd_warshall(grafo):
     matriz_adjancencia = matriz_de_adjacencia(grafo)
-    print(matriz_adjancencia)
     dist = list(map(lambda p: list(map(lambda q: q, p)), matriz_adjancencia))
     n = len(matriz_adjancencia)
 
